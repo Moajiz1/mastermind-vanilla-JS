@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterMind!!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="modal Win">
+        <div class="modal-Message">
+            <h1 class="cong">CONGRARTUALTIONS</h1>
+            <button class="btn-Play-Again">Play Again</button>
+        </div>
+    </div>
+    <div class="modal Lost">
+        <div class="modal-Message">
+            <h1 class="sorry">YOU LOST!!</h1>
+            <button class="btn-Play-Again">Play Again</button>
+        </div>
+    </div>
+    <div class="board">
+        <h1>
+            <span class="M">M</span>
+            <span class="A">A</span>
+            <span class="S">S</span>
+            <span class="T">T</span>
+            <span class="E">E</span>
+            <span class="R">R</span>
+            <span class="MIND">MIND</span>
+        </h1>
+        <span class="btn-Rules" onclick="myFunction()"> <p class="rules" onclick="changeHeading()" id="heading"> Show Rules</p>
+        </span>
+        <div id="rules" class="rules-details">
+            
+            <p class="info">
+                Try to guess the pattern, in both order and color, within ten turns. After submitting a row, a small black peg is placed for each code peg from the guess which is correct in both color and position. A white peg indicates the existence of a correct color code peg placed in the wrong position. More info on
+                <a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)" target="_blank">Wikipedia.</a>
+            </p>
+        </div>
+
+        <div class="guess-Container">
+
+            <div class="guess-Row flexer">
+                <div class="guess-Pegs flexer">
+                    <div class="guess-Peg active"></div>
+                    <div class="guess-Peg active"></div>
+                    <div class="guess-Peg active"></div>
+                    <div class="guess-Peg active"></div>
+                </div>
+                <div class="tickk">
+                <button class="btn-tick active-Tick"></button>
+            </div>
+                <div class="grade-Pegs first-Grade">
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                </div>
+            </div>
+
+            <div class="guess-Row flexer">
+                <div class="guess-Pegs flexer">
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                </div>
+                <div class="tickk">
+                    <button class="btn-tick "></button>
+                </div>
+                <div class="grade-Pegs">
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                </div>
+            </div>
+
+
+            <div class="guess-Row flexer">
+                <div class="guess-Pegs flexer">
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                </div>
+                <div class="tickk">
+                    <button class="btn-tick "></button>
+                </div>
+                <div class="grade-Pegs">
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                </div>
+            </div>
+
+
+            <div class="guess-Row flexer">
+                <div class="guess-Pegs flexer">
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                </div>
+                <div class="tickk">
+                    <button class="btn-tick "></button>
+                </div>
+                <div class="grade-Pegs">
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                </div>
+            </div>
+
+
+            <div class="guess-Row flexer">
+                <div class="guess-Pegs flexer">
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                </div>
+                <div class="tickk">
+                    <button class="btn-tick "></button>
+                </div>
+                <div class="grade-Pegs">
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                </div>
+            </div>
+
+
+            <div class="guess-Row flexer">
+                <div class="guess-Pegs flexer">
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                </div>
+                <div class="tickk">
+                    <button class="btn-tick "></button>
+                </div>
+                <div class="grade-Pegs">
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                </div>
+            </div>
+
+            <div class="guess-Row flexer">
+                <div class="guess-Pegs flexer">
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                </div>
+                <div class="tickk">
+                    <button class="btn-tick "></button>
+                </div>
+                <div class="grade-Pegs">
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                </div>
+            </div>
+
+
+            <div class="guess-Row flexer">
+                <div class="guess-Pegs flexer">
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                </div>
+                <div class="tickk">
+                    <button class="btn-tick "></button>
+                </div>
+                <div class="grade-Pegs">
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                </div>
+            </div>
+
+
+            <div class="guess-Row flexer">
+                <div class="guess-Pegs flexer">
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                </div>
+                <div class="tickk">
+                    <button class="btn-tick "></button>
+                </div>
+                <div class="grade-Pegs">
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                </div>
+            </div>
+
+
+            <div class="guess-Row flexer">
+                <div class="guess-Pegs flexer">
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                    <div class="guess-Peg"></div>
+                </div>
+                <div class="tickk">
+                    <button class="btn-tick "></button>
+                </div>
+                <div class="grade-Pegs">
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                    <div class="grade-Peg"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pegs Right">
+            <span class="pegR zero">
+                <input type="radio" name="peg-1" value="zero">
+                <label class="clr se" id="clr-One" for="peg-1"></label>
+            </span>
+            <span class="pegR one">
+                <input type="radio" name="peg-2" value="zero">
+                <label class="clr" for="peg-2"></label>
+            </span>
+            <span class="pegR two">
+                <input type="radio" name="peg-3" value="zero">
+                <label class="clr" for="peg-3"></label>
+            </span>
+            <span class="pegR three">
+                <input type="radio" name="peg-4" value="zero">
+                <label class="clr" for="peg-4"></label>
+            </span>
+            <span class="pegR four">
+                <input type="radio" name="peg-5" value="zero">
+                <label class="clr" for="peg-5"></label>
+            </span>
+            <span class="pegR five">
+                <input type="radio" name="peg-6" value="zero">
+                <label class="clr" for="peg-6"></label>
+            </span>
+        </div>
+
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="index.js"></script>
+<script src="https://kit.fontawesome.com/e6d46628c4.js" crossorigin="anonymous"></script>
+
+</html>

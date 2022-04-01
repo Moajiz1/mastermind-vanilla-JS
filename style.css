@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.rules{
+margin: 10px 0px;
+}
+.board{
+    /* background-color: rgb(209, 209, 209); */
+    width: 30%;
+    min-width: 450px;
+    height: 100vh;
+    margin: 2vh auto;
+}
+.flexer{
+    display: flex;
+}
+h1 span {
+    color: #FFFFFF;
+}
+h1{
+    font-size: 2.6rem;
+}
+.M{
+    background: #FFB400;
+}
+.A{
+    background: #FF5A5F;
+}
+.S{
+    background-color: #8CE071; 
+}
+.T{
+    background-color: #00D1C1;
+}
+.E{
+    background-color: #007A87;
+}
+.R{
+    background-color: #7B0051;
+}
+.MIND {
+color: #333333;
+}
+.rules-details{
+    border: 1px solid rgb(117, 117, 117);
+    min-width: 400px;
+    width: 30%;
+    margin:10px;
+}
+.info{
+    margin: 10px;
+}
+.btn-Rules{
+    cursor: pointer;
+}
+.guess-Container{
+    width: 85%;
+    height: 500px;
+    /* border: 1px solid black; */
+}
+.guess-Row{
+    width: 93%;
+    border: 1px solid rgb(70, 68, 68);
+    /* border: 1px solid red; */
+}
+.guess-Pegs{
+    height: 100%;
+    width:64%;
+    margin: 12px;
+/* border: 1px solid white; */
+}
+.grade-Pegs{
+    height: 63%;
+    width: 20%;
+    margin: 14px 10px;
+/* border: 1px solid white; */
+    flex-wrap: wrap;
+}
+.guess-Peg{
+    width: 40px;
+    height: 40px;
+    margin: 5px 7px 0 5px;
+    cursor: pointer;
+    border: #EAEBE9 2px solid;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.grade-Peg{
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    border: 1px solid #28222D;
+    border-radius: 50%;
+    left: 4px;
+    top: 3px;
+}
+.Right{
+    float: right;
+}
+
+.pegs{
+    width: 50px;
+    margin-top: -450px;
+}
+
+.pegR input[type="radio"] + label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    /* margin: 3px 14px 5px 14px; */
+    vertical-align: middle;
+    cursor: pointer;
+    border: #EAEBE9 2px solid;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+input[type="radio"] {
+    display: none;
+}
+.zero label {background: #FFB400;}
+.one label {background: #FF5A5F;}
+.two label {background-color: #8CE071;}
+.three label {background-color: #00D1C1;}
+.four label {background-color: #007A87;}
+.five label {background-color: #7B0051;}
+
+.cross-Pegs{
+text-align: center;
+font-size: 17px;
+}
+.modal{
+    position: absolute;
+    top: -120px;
+    left: 0;
+    height: 200vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: none;
+    z-index: 3;
+}
+
+.modal-Message{
+    width: 40%;
+    margin: 30% auto;
+}
+.sorry{
+    background-color: #990021;
+    border-radius: 14px;
+    height: 60px;
+}
+.cong{
+    background-color: #00D1C1;
+    border-radius: 14px;
+    height: 60px;
+}
+.btn-Play-Again{
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: #6ca532;
+    color: #EAEBE9;
+    cursor: pointer;
+    height: 40px;
+    margin: 12px;
+    border: 1px solid;
+}
+.tickk{
+    padding: 6px 14px;
+    cursor: pointer;
+}
+.btn-tick{
+    height: 60px;
+    position: relative;
+    /* margin: 15px 7px; */
+    border: none;
+    cursor: pointer;
+    right: 10px;
+    background-color: white;
+}
+.btn-tick::before{
+    left: 6px;
+    width: 5px;
+    height: 12px;
+    border-width: 0 5px 5px 0;
+    top: 50%;
+    border-style: solid;
+    border-color: #B4BB69;
+    margin-top: -11px;
+    transform: rotate(45deg);
+    content: "";
+    position: absolute;
+}
